@@ -3,51 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Christophe Gittens | About</title>
+    <title>Christophe Gittens | Projects</title>
     <link rel = "stylesheet" href="style.css">
 </head>
+<div class="header-container">
     <body>    
-        <header>
-            <nav>
+        <header class="wrapper-header">
+            <nav class="nav main-nav">
                 <ul>
                     <li><a href="about.html">ABOUT ME</a></li>
                     <li><a href="projects.html">PROJECTS</a></li>
                     <li><a href="home.html">HOME</a></li>
                 </ul>
             </nav>
-        </header>
-        <hr>
-        
-        <section>
-            <h2>Personal Projects</h2>
-
-            <h2>Other Projects</h2>
-            <p>In my banking internship my data analytics activities were centered around building internal tools to perform data anlytics and data cleaning</p>
-            <div>
-                <ul>
-                    <li><h3>Staff Monitoring Application</h3>
-                        <hr>
-                        <p>A Python application which allows the user to upload data stored in text files and excel files and takes user input for a threshold then subsequently obtains the staff transactions subject to review.</p>
-                    </li>
-                    <br>
-                    
-                    <li><h3>System Access Verification Application</h3>
-                        <hr>
-                        <p>A Python application which allows the user to upload data stored in text files and takes user input to search for specific user IDs, Customer Information File numbers (CIFs) and/or account numbers and maps the system accesses in one file to transactions stored in another.</p>
-                    </li>
-                    <br>
-
-                    <li><h3>File Formatting and Data Cleaning Application</h3>
-                    <hr>
-                    <p>A Python application which allows the user to drag and drop data stored in text files and format them so that the data for each entry is on a single line and not spilling over onto new lines. The cleaned data is reformatted in an Excel file.</p>
-                    </li>
+            <h1 class="name">Hi! I'm Christophe</h1>                                
+            <div class="wrapper">
+                <div class="static-txt">I'm a</div>
+                <ul class="dynamic-txts">
+                    <li><span>Computer Scientist</span></li>
+                    <li><span>Software Developer</span></li>
+                    <li><span>Tech Enthusiast</span></li>
+                    <li><span>Freelancer</span></li>
                 </ul>
             </div>
+        </header>
+    </div>
+    <hr>
+        
+        <section class="content-section continer">
+            <h2 class="section-header">Personal Projects</h2>
+
+            <h2 class="section-header">Other Projects</h2>
+            <div class="translucent-content-container">
+            <h3 class="section-sub-header">First Citizens Internship</h3>
+            <hr>
+            <p class="overview">In my banking internship my data analytics activities were centered around building internal tools to perform data anlytics and data cleaning</p><br>
+            <div class="list-indent">
+                <ul>
+                    <h3>Staff Monitoring Application</h3>
+                        <hr>
+                        <p>A Python application which allows the user to upload data stored in text files and excel files and takes user input for a threshold then subsequently obtains the staff transactions subject to review.</p>
+                    <br>
+                    
+                    <h3>System Access Verification Application</h3>
+                        <hr>
+                        <p>A Python application which allows the user to upload data stored in text files and takes user input to search for specific user IDs, Customer Information File numbers (CIFs) and/or account numbers and maps the system accesses in one file to transactions stored in another.</p>
+                    <br>
+
+                    <h3>File Formatting and Data Cleaning Application</h3>
+                    <hr>
+                    <p>A Python application which allows the user to drag and drop data stored in text files and format them so that the data for each entry is on a single line and not spilling over onto new lines. The cleaned data is reformatted in an Excel file.</p>
+                </ul>
+            </div>
+        </div>
     </section>
-    <footer>
-        <div>
-            <h3>Christophe Gittens</h3>
-            <ul>
+    <footer class="footer-container">
+        <div class="container main-footer-container">
+            <h3 class="name name-footer name-large">Christophe Gittens</h3>
+            <ul class="nav footer-nav">
                 <li><a href="https://www.linkedin.com/in/christophegittens/" target="blank"><img src =/Images/img.icons8.com-2.png></a></li>
                 <li><a href="https://github.com/chrissgitt" target="_blank"><img src=Images/icons8-github-24.png></a></li>
             </ul>
