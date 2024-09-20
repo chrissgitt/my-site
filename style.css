@@ -7,6 +7,7 @@
     font-weight: normal;
     font-style: normal;
 }
+
 *{
     margin: 0;
     padding: 0;
@@ -72,7 +73,7 @@ body{
 .header-container {
     width: 100%; /* or a specific width */
     padding: 20px; /* adjust padding as needed */
-    display: flex;
+    display: inline-flex;
     flex-direction: column; /* or row, based on your layout needs */
     align-items: center; /* centers content */
     justify-content: center; /* centers content vertically */
@@ -92,6 +93,7 @@ body{
 .translucent-content-container {
     background-color: rgba(255, 255, 255, 0.767);
     border-radius: 3%;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3), 0 12px 40px rgba(0, 0, 0, 0.2); /* Creates depth */
 }
 
 .main-footer {
@@ -174,7 +176,6 @@ body{
     height: 90px;
     line-height: 90px;
     overflow: hidden;
-
 }
 
 .dynamic-txts li{
