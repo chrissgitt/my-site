@@ -146,7 +146,6 @@ body{
     padding: 1.5em;
 }
 
-
 .wrapper{
     display: inline-flex;
 
@@ -187,8 +186,8 @@ body{
     background: #030423;
     height: 100%;
     width: 100%;
-    border-left: 2px solid rgb(62, 99, 62); /*#FC6D6D; */
-    animation: typing 2s steps(10) infinite;
+    border-left: 2px solid rgb(62, 99, 62);
+    animation: typing 2s steps(18) infinite;
 }
 
 @keyframes slide{
@@ -198,10 +197,92 @@ body{
 }
 
 @keyframes typing{
+    40%,
+    60%{
+        left:calc(100% + 30px);
+    }
     100%{
-        left: 100%;
-        margin: 0 -35px 0 35px;
+        left: 0;
     }
 }
 
+@media (max-width: 768px) {
+    .name {
+        font-size: 1.5em; /* Reduce font size for smaller screens */
+        text-align: center; /* Center the text */
+    }
+    .name-large {
+        font-size: 4em;
+    }
+    .wrapper .static-txt, .wrapper {
+        font-size: 15px; /* Smaller text for mobile */
+    }
+    .dynamic-txts {
+        height: 45px;
+        line-height: 5px;
+        background-color: red;
+    }
 
+    .dynamic-txts li{
+        position: relative;
+        height: 45px;
+        top: 0;
+        animation: slide 8s steps(4) infinite;
+        
+    }
+
+    /* .dynamic-txts li span::after{
+        background-color: red;
+    } */
+
+    @keyframes slide{
+        100%{
+            top: -300px;
+        }
+    }
+    
+    @keyframes typing{
+        40%,
+        60%{
+            left:calc(100% + 30px);
+        }
+        100%{
+            left: 0;
+        }
+    }
+    .content-section {
+        margin: 0.5em; /* Reduce margin for smaller screens */
+    }
+    .section-header {
+        font-size: 1.8em; /* Smaller section headers */
+    }
+    .overview {
+        padding: 0.5em;
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+    .nav ul {
+        display: flex;
+        flex-direction: column; /* Stack menu items vertically on mobile */
+        align-items: center;
+    }
+    .nav a {
+        padding: 0.8em; /* Increase padding for touch-friendly links */
+    }
+}
+
+/* Media query for even smaller screens */
+@media (max-width: 480px) {
+    .name {
+        font-size: 1.2em;
+    }
+    .dynamic-txts li {
+        font-size: 18px;
+    }
+    .section-header {
+        font-size: 1.5em;
+    }
+    .overview {
+        font-size: 0.9em;
+    }
+}
