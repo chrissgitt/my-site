@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald:300,400');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Oswald', oswald;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+    min-height: 100wh;
+    background-color:#fff;
+    background-size: 40px 40px;
+    background-image:
+    linear-gradient(to right, grey 1px, transparent 1px),
+    linear-gradient(to bottom, grey 1px, transparent 1px);
+}
+
+.header-container {
+    width: 100%; /* or a specific width */
+    padding: 20px; /* adjust padding as needed */
+    display: flex;
+    flex-direction: column; /* or row, based on your layout needs */
+    align-items: center; /* centers content */
+    justify-content: center; /* centers content vertically */
+    background-color: rgb(47, 46, 46);
+}
+
+.wrapper{
+    display: inline-flex;
+}
+
+.wrapper .static-txt{
+    color: #fff;
+    font-size: 60px;
+    font-weight: 400;
+}
+
+.wrapper .dynamic-txts{
+    margin-left: 15px;
+    height: 90px;
+    line-height: 90px;
+    overflow: hidden;
+
+}
+
+.dynamic-txts li{
+    color:#73de46;
+    list-style: none;
+    font-size: 60px;
+    font-weight: 500;
+    position: relative;
+    top: 0;
+    animation: slide 8s steps(4) infinite;
+}
+
+.dynamic-txts li span{
+    position: relative;
+}
+
+.dynamic-txts li span::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    background: rgb(47, 46, 46);
+    height: 100%;
+    width: 100%;
+    border-left: 2px solid rgb(62, 99, 62); /*#FC6D6D; */
+    animation: typing 2s steps(10) infinite;
+}
+
+@keyframes slide{
+    100%{
+        top: -360px;
+    }
+}
+
+@keyframes typing{
+    100%{
+        left: 100%;
+        margin: 0 -35px 0 35px;
+    }
+}
