@@ -136,6 +136,18 @@ body{
     font-size: 1.5em;
 }
 
+.section-sub-sub-header{
+    font-family: "oswald";
+    font-weight: normal;
+    border-bottom: 1px solid black;
+    margin-right: 1.5em;
+    margin-left: 0.5em;
+    padding: 0.5em;
+    color: black;
+    text-align: left;
+    font-size: 1.3em;
+}
+
 .overview{
     padding: 0.5em;
     margin-left: 1.5em;
@@ -214,21 +226,25 @@ body{
     .name-large {
         font-size: 4em;
     }
-    .wrapper .static-txt, .wrapper {
-        font-size: 15px; /* Smaller text for mobile */
+    .wrapper .static-txt{
+        font-size: 30px; /* Smaller text for mobile */
+        
     }
     .dynamic-txts {
-        height: 45px;
-        line-height: 5px;
-        background-color: red;
+        height: 30px;
+        line-height: 30px;
+        overflow: hidden;
+
     }
 
-    .dynamic-txts li{
-        position: relative;
-        height: 45px;
-        top: 0;
+    .dynamic-txts li {
+        position:relative;
+        list-style: none;
+        top: -10px; /* Start at the top */
+        height: 45px; /* Ensure each list item fits within this height */
+        font-size: 30px;
         animation: slide 8s steps(4) infinite;
-        
+
     }
 
     /* .dynamic-txts li span::after{
@@ -237,14 +253,15 @@ body{
 
     @keyframes slide{
         100%{
-            top: -300px;
+            top: -180px;
+            
         }
     }
     
     @keyframes typing{
-        40%,
+        30%,
         60%{
-            left:calc(100% + 30px);
+            left:calc(100% + 15px);
         }
         100%{
             left: 0;
