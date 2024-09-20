@@ -12,11 +12,53 @@ body{
     align-items:center;
     justify-content: center;
     min-height: 100wh;
-    background-color:#fff;
+    background-color:black;
     background-size: 40px 40px;
     background-image:
     linear-gradient(to right, grey 1px, transparent 1px),
     linear-gradient(to bottom, grey 1px, transparent 1px);
+}
+
+.nav ul{
+    margin: 0;
+}
+
+.nav li{
+    display: inline;
+}
+
+.nav a {
+    display: inline-block;
+    padding-right: .5em;
+    color: white;
+    text-decoration: none;
+}
+
+.footer-nav li{
+    padding: 0 .5em;
+}
+
+.name{
+    text-align: left;
+    margin: 0;
+    font-size: 2em;
+    font-family: "Oswald";
+    font-weight: normal;
+    color: white;
+    padding-top: 20px;
+}
+
+.name-large{
+    font-size: 8em;
+}
+
+.name-footer{
+    text-align: center;
+    margin: 0;
+    font-size: 4em;
+    font-family: "Oswald";
+    font-weight: normal;
+    color: black;
 }
 
 .header-container {
@@ -26,8 +68,71 @@ body{
     flex-direction: column; /* or row, based on your layout needs */
     align-items: center; /* centers content */
     justify-content: center; /* centers content vertically */
-    background-color: rgb(47, 46, 46);
+    background-color: black;
 }
+
+.footer-container {
+    width: 100%; /* or a specific width */
+    padding: 20px; /* adjust padding as needed */
+    display: flex;
+    flex-direction: column; /* or row, based on your layout needs */
+    align-items: center; /* centers content */
+    justify-content: center; /* centers content vertically */
+    background-color: rgb(238, 238, 233);
+}
+
+.translucent-content-container {
+    background-color: #fff;
+    background-color: rgba(255,255,255,0.5);
+}
+
+.main-footer {
+    background-color:beige;
+    color: white;
+    padding: .25em 0;
+}
+
+.main-footer-container{
+    display: flex;
+    align-items: center;
+}
+
+.main-footer-container ul{
+    flex-grow: 1;
+    text-align: end;
+}
+
+
+.content-section {
+    margin: 1em;
+    color:#fff;
+}
+
+.section-header {
+    font-family: "oswald";
+    font-weight: normal;
+    color: #fff;
+    text-align: center;
+    font-size: 2.5em;
+}
+
+.section-sub-header {
+    font-family: "oswald";
+    font-weight: normal;
+    padding: 0.5em;
+    color: #fff;
+    text-align: left;
+    font-size: 1.5em;
+}
+
+.overview{
+    padding: 0.5em;
+}
+
+.list-indent{
+    padding: 1.5em;
+}
+
 
 .wrapper{
     display: inline-flex;
@@ -65,7 +170,7 @@ body{
     content: "";
     position: absolute;
     left: 0;
-    background: rgb(47, 46, 46);
+    background: black;
     height: 100%;
     width: 100%;
     border-left: 2px solid rgb(62, 99, 62); /*#FC6D6D; */
