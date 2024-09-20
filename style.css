@@ -1,4 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Oswald:300,400');
+
+@font-face {
+    font-family: "ScreenMatrix";
+    src: url(Fonts/ScreenMatrix.ttf) format("woff");
+    src: url(Fonts/ScreenMatrix.ttf) format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
 *{
     margin: 0;
     padding: 0;
@@ -12,7 +20,7 @@ body{
     align-items:center;
     justify-content: center;
     min-height: 100wh;
-    background-color:black;
+    background-color:#030423;
     background-size: 40px 40px;
     background-image:
     linear-gradient(to right, grey 1px, transparent 1px),
@@ -42,7 +50,7 @@ body{
     text-align: left;
     margin: 0;
     font-size: 2em;
-    font-family: "Oswald";
+    font-family: "ScreenMatrix";
     font-weight: normal;
     color: white;
     padding-top: 20px;
@@ -56,7 +64,7 @@ body{
     text-align: center;
     margin: 0;
     font-size: 4em;
-    font-family: "Oswald";
+    font-family: "oswald";
     font-weight: normal;
     color: black;
 }
@@ -68,7 +76,7 @@ body{
     flex-direction: column; /* or row, based on your layout needs */
     align-items: center; /* centers content */
     justify-content: center; /* centers content vertically */
-    background-color: black;
+    background-color: #030423;
 }
 
 .footer-container {
@@ -82,8 +90,8 @@ body{
 }
 
 .translucent-content-container {
-    background-color: #fff;
-    background-color: rgba(255,255,255,0.5);
+    background-color: rgba(255, 255, 255, 0.767);
+    border-radius: 3%;
 }
 
 .main-footer {
@@ -105,7 +113,7 @@ body{
 
 .content-section {
     margin: 1em;
-    color:#fff;
+    color:black
 }
 
 .section-header {
@@ -119,14 +127,19 @@ body{
 .section-sub-header {
     font-family: "oswald";
     font-weight: normal;
+    border-bottom: 1px solid black;
+    margin-right: 1.5em;
+    margin-left: 0.5em;
     padding: 0.5em;
-    color: #fff;
+    color: black;
     text-align: left;
     font-size: 1.5em;
 }
 
 .overview{
     padding: 0.5em;
+    margin-left: 1.5em;
+    margin-right: 3.5em;
 }
 
 .list-indent{
@@ -136,6 +149,7 @@ body{
 
 .wrapper{
     display: inline-flex;
+
 }
 
 .wrapper .static-txt{
@@ -170,7 +184,7 @@ body{
     content: "";
     position: absolute;
     left: 0;
-    background: black;
+    background: #030423;
     height: 100%;
     width: 100%;
     border-left: 2px solid rgb(62, 99, 62); /*#FC6D6D; */
@@ -189,3 +203,5 @@ body{
         margin: 0 -35px 0 35px;
     }
 }
+
+
