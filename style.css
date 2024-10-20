@@ -74,7 +74,7 @@ body{
     width: 100%; /* or a specific width */
     padding: 20px; /* adjust padding as needed */
     display: inline-flex;
-    flex-direction: column; /* or row, based on your layout needs */
+    flex-direction: column;
     align-items: center; /* centers content */
     justify-content: center; /* centers content vertically */
     background-color: #030423;
@@ -229,7 +229,6 @@ body{
     }
     .wrapper .static-txt{
         font-size: 30px; /* Smaller text for mobile */
-        
     }
     .dynamic-txts {
         height: 30px;
@@ -237,24 +236,30 @@ body{
         overflow: hidden;
     }
 
-
     .dynamic-txts li {
         position:relative;
         list-style: none;
-        top: 0px; /* Start at the top */
-        height: 45px; /* Ensure each list item fits within this height */
+        top: -24px; /* Start at the top */
+        height: 41px; /* Ensure each list item fits within this height */
         font-size: 30px;
         animation: slide 8s steps(4) infinite;
     }
 
-    /* .dynamic-txts li span::after{
-        background-color: red;
-    } */
+    .dynamic-txts li span::after{
+        top: 0px;
+    }
+
+    .wrapper .dynamic-txts{
+        margin-left: 15px;
+        height: 37px;
+        line-height: 90px;
+        overflow: hidden;
+        
+    }
 
     @keyframes slide{
         100%{
-            top: -180px;
-            
+            top: -185px;
         }
     }
     
@@ -294,8 +299,24 @@ body{
         font-size: 1.2em;
     }
     .dynamic-txts li {
+        position:relative;
+        list-style: none;
+        top: -32px; /* Start at the top */
+        height: 39px; /* Ensure each list item fits within this height */
         font-size: 18px;
+        animation: slide 8s steps(4) infinite;
     }
+
+    .wrapper .dynamic-txts{
+        margin-left: 5px;
+        height: 38px;
+        line-height: 90px;
+        overflow: hidden;
+    }
+    .wrapper .static-txt{
+        font-size: 18px; /* Smaller text for mobile */
+    }
+
     .section-header {
         font-size: 1.5em;
     }
