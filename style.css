@@ -15,6 +15,7 @@
     font-family: 'Oswald', oswald;
 }
 
+
 body{
     display: flex;
     flex-direction: column;
@@ -24,8 +25,9 @@ body{
     background-color:#030423;
     background-size: 40px 40px;
     background-image:
-    linear-gradient(to right, grey 1px, transparent 1px),
-    linear-gradient(to bottom, grey 1px, transparent 1px);
+    linear-gradient(to right, rgba(128, 128, 128, 0.437) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(128, 128, 128, 0.437) 1px, transparent 1px);
+    background-attachment: fixed;
 }
 
 .nav ul{
@@ -43,14 +45,23 @@ body{
     text-decoration: none;
 }
 
+.footer-nav{
+    margin-top: auto;
+}
+
 .footer-nav li{
-    padding: 0 .5em;
+    padding: 0em;
+}
+
+.icon {
+    max-width: 5vw; /* Responsive sizing based on viewport width */
+    height: auto;
 }
 
 .name{
     text-align: left;
     margin: 0;
-    font-size: 2em;
+    font-size: 2.2em;
     font-family: "ScreenMatrix";
     font-weight: normal;
     color: white;
@@ -90,10 +101,14 @@ body{
     background-color: rgb(238, 238, 233);
 }
 
-.translucent-content-container {
-    background-color: rgba(255, 255, 255, 0.767);
-    border-radius: clamp(20px, 3%, 12px);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3), 0 12px 40px rgba(0, 0, 0, 0.2); /* Creates depth */
+.translucent-content-container{
+    background-color: rgba(186, 174, 223, 0.215);
+    border-radius: clamp(5px, 3%, 12px) clamp(60px, 3%, 12px);
+}
+
+.translucent-content-container-home{
+    background-color: rgba(186, 174, 223, 0.215);
+    width: 100%;
 }
 
 .main-footer {
@@ -112,10 +127,47 @@ body{
     text-align: end;
 }
 
+.content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.content-column {
+    flex: 1;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.content-column img {
+    max-width: 170%;
+    height: auto;
+    align-self: center;
+    margin-top: auto;
+}
+
+.content-column-left{
+    margin-right: 50px;
+    margin-left: 10px;
+}
+
+.content-column-right{
+    margin-left: 50px;
+    margin-right: 10px;
+}
 
 .content-section {
     margin: 1em;
-    color:black
+    color:rgba(255, 255, 255, 0.871);
+}
+
+.content-section-home{
+    margin: 0em;
+    color:rgba(255, 255, 255, 0.871);
 }
 
 .paragraph-section {
@@ -130,14 +182,45 @@ body{
     font-size: 2.5em;
 }
 
+.home-header {
+    font-family: "oswald";
+    font-weight: normal;
+    color: #fff;
+    font-size: 3em;
+}
+
+.header-left{
+    text-align: left;
+    margin-left: 3%;
+}
+
+.header-right{
+    text-align: right;
+    margin-right: 3%;
+}
+
+.align-left{
+    text-align: left;
+}
+
+.align-right{
+    text-align: right;
+}
+
+.text-format{
+    color: white;
+    opacity: 50%;
+    font-size: 1.2em;
+}
+
 .section-sub-header {
     font-family: "oswald";
     font-weight: normal;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid white;
     margin-right: 1.5em;
     margin-left: 0.5em;
     padding: 0.5em;
-    color: black;
+    color: white;
     text-align: left;
     font-size: 1.5em;
 }
@@ -145,11 +228,11 @@ body{
 .section-sub-sub-header{
     font-family: "oswald";
     font-weight: normal;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid white;
     margin-right: 1.5em;
     margin-left: 0.5em;
     padding: 0.5em;
-    color: black;
+    color: white;
     text-align: left;
     font-size: 1.3em;
 }
@@ -223,11 +306,39 @@ body{
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 768px) and (orientation: landscape){
+    .content-column h2 {
+        font-size: 2.2em; /* Decrease font size of headers */
+    }
+    .content-column p {
+        font-size: 1em; /* Decrease font size of paragraphs */
+    }
+}
+
+@media (max-width: 768px) and (orientation: portrait){
     .name {
-        font-size: 1.5em; /* Reduce font size for smaller screens */
+        font-size: 1.6em; /* Reduce font size for smaller screens */
         text-align: center; /* Center the text */
     }
+
+    .content-column img {
+        max-width: 260%; /* Make the image take up more space on smaller screens */
+        margin-top: auto; /* Pushes the image to the bottom */
+        align-self: center;
+    }
+
+    .content-column h2 {
+        font-size: 2em; /* Decrease font size of headers */
+    }
+
+    .content-column p {
+        font-size: 0.9em; /* Decrease font size of paragraphs */
+    }
+
+    .content-column{
+        padding: 0px;
+    }
+
     .name-large {
         font-size: 4em;
     }
@@ -279,6 +390,10 @@ body{
     .content-section {
         margin: 0.5em; /* Reduce margin for smaller screens */
     }
+    .translucent-content-container {
+        background-color: rgba(186, 174, 223, 0.215); /*0.767*/
+        border-radius: clamp(10px, 3%, 12px) clamp(40px, 3%, 12px);
+    }
     .section-header {
         font-size: 1.8em; /* Smaller section headers */
     }
@@ -295,30 +410,59 @@ body{
     .nav a {
         padding: 0.8em; /* Increase padding for touch-friendly links */
     }
+
+    .name-footer{
+        font-size: 3em;
+    }
+
+    .icon {
+        max-width: 25px;
+    }
 }
 
 /* Media query for even smaller screens */
-@media (max-width: 480px) {
+@media (max-width: 480px) and (orientation: portrait) {
     .name {
-        font-size: 1.2em;
+        font-size: 1.5em;
     }
+
+    .content-column img {
+        max-width: 260%; /* Make the image take up more space on smaller screens */
+        margin-top: auto; /* Pushes the image to the bottom */
+        align-self: center;
+    }
+
+    .content-column h2 {
+        font-size: 1.2em; /* Decrease font size of headers */
+    }
+
+    .content-column p {
+        font-size: 0.7em; /* Decrease font size of paragraphs */
+    }
+
+
+    .content-column{
+        padding: 0px;
+    }
+    
     .dynamic-txts li {
         position:relative;
         list-style: none;
-        top: -31px; /* Start at the top */
-        height: 39px; /* Ensure each list item fits within this height */
-        font-size: 18px;
+        top: -20px; /* Start at the top */
+        height: 42px; /* Ensure each list item fits within this height */
+        font-size: 30px;
         animation: slide 8s steps(4) infinite;
     }
 
     .wrapper .dynamic-txts{
         margin-left: 5px;
-        height: 38px;
-        line-height: 88.5px;
+        height: 39px;
+        line-height: 80px;
         overflow: hidden;
     }
-    .wrapper .static-txt{
-        font-size: 18px; /* Smaller text for mobile */
+    .wrapper .static-txt {
+        font-size: 30px; /* Smaller text for mobile */
+        margin-top: -2px; /* Adjust this value as needed to move text higher */
     }
 
     .section-header {
@@ -327,4 +471,18 @@ body{
     .overview {
         font-size: 0.9em;
     }
+
+    .translucent-content-container {
+        background-color: rgba(186, 174, 223, 0.215); /*0.767*/
+        border-radius: clamp(10px, 3%, 12px) clamp(40px, 3%, 12px);
+    }
+
+    .name-footer{
+        font-size: 1.98em;
+    }
+
+    .icon {
+        max-width: 15px;
+    }
 }
+
