@@ -8,6 +8,38 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: "LedDisply";
+    src: url(Fonts/The\ Led\ Display\ St.ttf) format("woff");
+    src: url(Fonts/The\ Led\ Display\ St.ttf) format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "digital-7";
+    src: url(Fonts/digital-7.ttf) format("woff");
+    src: url(Fonts/digital-7.ttf) format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "LineBeam";
+    src: url(Fonts/Linebeam.ttf) format("woff");
+    src: url(Fonts/Linebeam.ttf) format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "IBM";
+    src: url(Fonts/IBM-Logo.ttf) format("woff");
+    src: url(Fonts/IBM-Logo.ttf) format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -253,6 +285,15 @@ body{
     font-size: 2.5em;
 }
 
+.section-header-alt {
+    margin-top: 0.8em;
+    font-family: "IBM";
+    font-weight: normal;
+    color: #fff;
+    text-align: center;
+    font-size: 3em;
+}
+
 .section-header-alternate {
     font-family: "ScreenMatrix";
     font-weight: normal;
@@ -304,11 +345,6 @@ body{
     font-weight: 200;
 }
 
-.text-format-light{
-    font-size: 1.2rem;
-
-}
-
 .section-sub-header {
     font-family: "oswald";
     font-weight: normal;
@@ -318,7 +354,7 @@ body{
     padding-bottom: 0em;
     color: white;
     text-align: left;
-    font-size: 1.5em;
+    font-size: 1.2em;
 }
 
 .section-sub-sub-header{
@@ -330,7 +366,11 @@ body{
     padding-bottom: 0.2em;
     color: white;
     text-align: left;
-    font-size: 1.3em;
+    font-size: 1em;
+}
+
+.text-format-light{
+    font-size: 1em;
 }
 
 .list-indent{
@@ -584,8 +624,8 @@ body{
         border-top-right-radius: clamp(40px, 3%, 12px);
     }
 
-    .section-header {
-        font-size: 1.8em; /* Smaller section headers */
+    .section-header, .section-header-alt {
+        font-size: 2em; /* Smaller section headers */
     }
     .overview {
         padding: 0.5em;
@@ -675,8 +715,8 @@ body{
         margin-top: -2px; /* Adjust this value as needed to move text higher */
     }
 
-    .section-header {
-        font-size: 1.5em;
+    .section-header, .section-header-alt {
+        font-size: 2em;
     }
 
     .section-header-alternate{
@@ -688,7 +728,7 @@ body{
     }
     left-indent
     .section-sub-sub-header{
-        font-size: 1.1em;
+        font-size: 0.9em;
     }
 
     .text-format-dark{
